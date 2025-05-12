@@ -26,7 +26,10 @@ class Post(models.Model):
         on_delete=models.SET_NULL,
         related_name="posts",
         verbose_name="Группа статей",
-        help_text="Выберите тематическую группу " "в выпадающем списке по желанию",
+        help_text=(
+            "Выберите тематическую группу "
+            "в выпадающем списке по желанию"
+        ),
     )
     image = models.ImageField(
         verbose_name="Картинка статьи",
